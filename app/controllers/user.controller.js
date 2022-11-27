@@ -1,8 +1,6 @@
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
-import { createRequire } from 'module'
-
 // Create and Save a new User
 exports.create = (req, res) => {
   var users = JSON.parse(fs.readFileSync(`${__dirname}/../../database.json`, 'utf8'));
